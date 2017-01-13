@@ -23,7 +23,7 @@ export class LeanHoverProvider implements HoverProvider {
                 if (response.record.doc) {
                     marked.push(response.record.doc);
                 }
-                if (response.record.state && !marked) {
+                if (response.record.state && !marked.length) {
                     marked.push({ language: 'lean', value: response.record.state });
                 }
             }
